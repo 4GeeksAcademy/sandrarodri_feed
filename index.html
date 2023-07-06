@@ -1,60 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <title>Instagram Feed</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <title>Instagram Feed</title>
 </head>
+
 <body>
   <nav class="navbar bg-body-tertiary">
     <div class="container">
       <div>
         <a class="navbar-brand" href="https://www.instagram.com/">
-        <i class="fa-brands fa-instagram" alt="Logo" width="40" height="40" ></i>
-        <p class="d-inline-block align-text-top">Instagram</p>
+          <i class="fa-brands fa-instagram" alt="Logo" width="40" height="40"></i>
+          <p class="d-inline-block align-text-top">Instagram</p>
         </a>
       </div>
-    <div m-s-auto>
-      <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#newPost">
-        Create a new post
-      </button>
-      <div class="modal fade" id="newPost" tabindex="-1" aria-labelledby="newPostLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="newPostLabel">Create a new Post</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div m-s-auto>
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#newPost">
+          Create a new post
+        </button>
+        <div class="modal fade" id="newPost" tabindex="-1" aria-labelledby="newPostLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="newPostLabel">Create a new Post</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Caption:</p>
+                <textarea class="form-control" rows="2" id="comment" placeholder="Ad the caption of your post here"
+                  name="text"></textarea>
+                <br>
+                <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-camera"></i></button>
+                <button type="button" class="btn btn-outline-secondary"><i
+                    class="fa-solid fa-location-dot"></i></button>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Publish</button>
+              </div>
             </div>
-        <div class="modal-body">
-          <p>Caption:</p>
-          <textarea class="form-control" rows="2" id="comment" placeholder="Ad the caption of your post here" name="text"></textarea>
-          <br>
-          <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-camera"></i></button>
-          <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-location-dot"></i></button>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-success">Publish</button>
-        </div>
           </div>
         </div>
+        <div class="btn-group">
+          <button class="btn btn-secondary dropdown-toggle me-3" type="button" data-bs-toggle="dropdown"
+            data-bs-display="static" aria-expanded="false">
+            <i class="fa-solid fa-gear"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="btn-group">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="fa-solid fa-gear"></i>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Profile</a></li>
-          <li><a class="dropdown-item" href="#">Accesibility</a></li>
-          <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
-        </ul>
-      </div>
-    </div>
     </div>
   </nav>
   <div class="container d-flex justify-content-center">
@@ -73,77 +83,84 @@
   </div>
   <div class="container text-center tab-content">
     <div id="grid" class="tab-pane active">
-        <div class="row row-cols-3">
-          <div class="col p-1">
-            <img src="https://picsum.photos/id/10/420" class="img-fluid" alt="paisaje1">
-          </div>
-          <div class="col p-1">
-            <img src="https://picsum.photos/id/11/420" class="img-fluid" alt="paisaje2">
-          </div>
-          <div class="col p-1">
-            <img src="https://picsum.photos/id/12/420" class="img-fluid" alt="paisaje3">
-          </div>
-          <div class="col p-1">
-            <img src="https://picsum.photos/id/13/420" class="img-fluid" alt="paisaje4">
-          </div>
-          <div class="col p-1">
-            <img src="https://picsum.photos/id/14/420" class="img-fluid" alt="paisaje5">
-          </div>
-          <div class="col p-1">
-            <img src="https://picsum.photos/id/15/420" class="img-fluid" alt="paisaje6">
-          </div>
-          <div class="col p-1">
-            <img src="https://picsum.photos/id/16/420" class="img-fluid" alt="paisaje7">
-          </div>
-          <div class="col p-1">
-            <img src="https://picsum.photos/id/17/420" class="img-fluid" alt="paisaje8">
-          </div>
-          <div class="col p-1">
-            <img src="https://picsum.photos/id/18/420" class="img-fluid" alt="paisaje9">
-          </div>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-xl-4 p-1">
+          <img src="https://picsum.photos/id/10/420" class="img-fluid" alt="paisaje1">
         </div>
-    </div>
-    <div id="post" class="tab-pane fade">
-      <div class="post border mx-auto mb-3" style="width: 40%;">
-        <div class="title p-2 d-flex justify-content-between">
-          <h1 class="text-start fs-4">From the mountains</h1>
-          <p class="text-end fs-5">01/09</p>
+        <div class="col-12 col-sm-6 col-xl-4 p-1">
+          <img src="https://picsum.photos/id/11/420" class="img-fluid" alt="paisaje2">
         </div>
-        <img src="https://picsum.photos/id/10/420" class="card-img-top" alt="paisaje1">
-        <div class="card-body p-2">
-          <p class="counter text-start"><b>204 likes</b></p>
-          <p class="card-text text-start">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div class="col-12 col-sm-6 col-xl-4 p-1">
+          <img src="https://picsum.photos/id/12/420" class="img-fluid" alt="paisaje3">
         </div>
-      </div>
-      <div class="post border mx-auto mb-3" style="width: 40%;">
-        <div class="title p-2 d-flex justify-content-between">
-          <h1 class="text-start fs-4">A beautiful place</h1>
-          <p class="text-end fs-5">02/09</p>
+        <div class="col-10 col-sm-6 col-xl-4 p-1">
+          <img src="https://picsum.photos/id/13/420" class="img-fluid" alt="paisaje4">
         </div>
-        <img src="https://picsum.photos/id/11/420" class="card-img-top" alt="paisaje2">
-        <div class="card-body p-2">
-          <p class="counter text-start"><b>10430 likes</b></p>
-          <p class="card-text text-start">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div class="col-10 col-sm-6 col-xl-4 p-1">
+          <img src="https://picsum.photos/id/14/420" class="img-fluid" alt="paisaje5">
         </div>
-      </div>
-      <div class="post border mx-auto mb-3" style="width: 40%;">
-        <div class="title p-2 d-flex justify-content-between">
-          <h1 class="text-start fs-4">Best view</h1>
-          <p class="text-end fs-5">03/09</p>
+        <div class="col-10 col-sm-6 col-xl-4 p-1">
+          <img src="https://picsum.photos/id/15/420" class="img-fluid" alt="paisaje6">
         </div>
-        <img src="https://picsum.photos/id/12/420" class="card-img-top" alt="paisaje3">
-        <div class="card-body p-2">
-          <p class="counter text-start"><b>921 likes</b></p>
-          <p class="card-text text-start">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div class="col-10 col-sm-6 col-xl-4 p-1">
+          <img src="https://picsum.photos/id/16/420" class="img-fluid" alt="paisaje7">
+        </div>
+        <div class="col-10 col-sm-6 col-xl-4 p-1">
+          <img src="https://picsum.photos/id/17/420" class="img-fluid" alt="paisaje8">
+        </div>
+        <div class="col-10 col-sm-6 col-xl-4 p-1">
+          <img src="https://picsum.photos/id/18/420" class="img-fluid" alt="paisaje9">
         </div>
       </div>
     </div>
-
-
-
-
+    <div id="post" class="container-fluid tab-pane fade">
+      <div class="row">
+        <div class="post border mx-auto mb-3 col-12 col-sm-8 col-lg-6">
+          <div class="title p-2 d-flex justify-content-between">
+            <h1 class="text-start fs-4">From the mountains</h1>
+            <p class="text-end fs-5">01/09</p>
+          </div>
+          <img src="https://picsum.photos/id/10/420" class="card-img-top" alt="paisaje1">
+          <div class="card-body p-2">
+            <p class="counter text-start"><b>204 likes</b></p>
+            <p class="card-text text-start">Some quick example text to build on the card title and make up the bulk of
+              the card's content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="post border mx-auto mb-3 col-12 col-sm-8 col-lg-6">
+          <div class="title p-2 d-flex justify-content-between">
+            <h1 class="text-start fs-4">A beautiful place</h1>
+            <p class="text-end fs-5">02/09</p>
+          </div>
+          <img src="https://picsum.photos/id/11/420" class="card-img-top" alt="paisaje2">
+          <div class="card-body p-2">
+            <p class="counter text-start"><b>10430 likes</b></p>
+            <p class="card-text text-start">Some quick example text to build on the card title and make up the bulk of
+              the card's content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="post border mx-auto mb-3 col-12 col-sm-8 col-lg-6">
+          <div class="title p-2 d-flex justify-content-between">
+            <h1 class="text-start fs-4">Best view</h1>
+            <p class="text-end fs-5">03/09</p>
+          </div>
+          <img src="https://picsum.photos/id/12/420" class="card-img-top" alt="paisaje3">
+          <div class="card-body p-2">
+            <p class="counter text-start"><b>921 likes</b></p>
+            <p class="card-text text-start">Some quick example text to build on the card title and make up the bulk of
+              the card's content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
 </body>
-</html>
 
+</html>
